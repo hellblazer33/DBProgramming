@@ -63,9 +63,6 @@ INSERT INTO PersonsEmail(Email)
 VALUES ('pankaj123@gmail.com'),
 ('johndoe123@gmail.com');
 
-CREATE TABLE persons (
-PersonID int AUTO_INCREMENT,
-CONSTRAINT PK_Persons PRIMARY KEY (PersonID));
 
 SELECT persons.PersonID, persons.FirstName
 FROM persons
@@ -76,3 +73,13 @@ SELECT persons.PersonID, persons.FirstName
 FROM persons
 INNER JOIN PersonsEmail ON persons.PersonID=PersonsEmail.ID
 ORDER BY persons.FirstName;
+
+
+SELECT FirstName FROM persons
+UNION ALL
+SELECT Email FROM personsemail;
+
+
+SELECT FirstName
+FROM persons
+GROUP BY FirstName;
