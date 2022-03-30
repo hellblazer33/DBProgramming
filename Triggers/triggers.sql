@@ -12,7 +12,7 @@ END //
 INSERT INTO persons
 VALUES (5, 'Waugh', 'Sam', 'India', 'Delhi');
 
-SELECT * FROM Persons;
+SELECT * FROM Persons;  --
 
 
 #before update trigger
@@ -34,7 +34,7 @@ END $$
 
 DROP TRIGGER dbprogramming.before_update_persons;  
 
-UPDATE persons SET city = 'Delhi' WHERE PersonID = 1;   
+UPDATE persons SET city = 'Delhi' WHERE PersonID = 1;   --- 
 
 CREATE TABLE persons_log(    
     user varchar(255) NOT NULL,    
@@ -60,7 +60,7 @@ UPDATE persons
 SET City = 'Chennai' 
 WHERE PersonID = 5;  
 
-SELECT * FROM persons_log
+SELECT * FROM persons_log --
 
 SHOW TRIGGERS;
  
@@ -91,7 +91,7 @@ DELIMITER ;
 
 DELETE FROM persons WHERE City = 'Mumbai';  
 
-SELECT * FROM persons_archives;
+SELECT * FROM persons_archives;  --
 
 #after delete trigger
 
@@ -119,4 +119,4 @@ SELECT * FROM persons;
 
 DELETE FROM persons WHERE PersonID = 3;  
 
-SELECT * FROM citydata;
+SELECT * FROM citydata;  --
